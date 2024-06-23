@@ -3,7 +3,7 @@ const { Telegraf } = require("telegraf");
 const TOKEN = "7162733485:AAE7qf0rbq258QuYM6WepPK4hOLh4htUHZA";
 const bot = new Telegraf(TOKEN);
 
-const web_link = "https://jazzy-cajeta-2816b4.netlify.app/";
+const web_link = "https://murodcombat.netlify.app/";
 
 bot.start((ctx) => {
   console.log(ctx.update.message.text);
