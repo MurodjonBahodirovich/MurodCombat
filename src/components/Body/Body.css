@@ -93,3 +93,11 @@
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 300px) {
+  .circle_container {
+    width: 27rem;
+    height: 27rem;
+    margin: 2rem auto;
+  }
+}
