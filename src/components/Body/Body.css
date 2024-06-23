@@ -1,0 +1,95 @@
+.circle_container {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background: linear-gradient(rgb(6, 52, 255), rgb(14, 14, 110));
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.circle_container:active {
+  transform: scale(0.98);
+}
+
+.circle_container div {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.85;
+  background: url(../../images/image.JPG) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.circle_container p {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  animation-name: score;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 10;
+}
+
+.circle_container p::after {
+  content: "+10";
+  opacity: 0;
+  animation-name: score;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+
+  position: absolute;
+  bottom: -200%;
+  left: 150%;
+
+  z-index: 10;
+}
+
+.circle_container p::before {
+  content: "+10";
+  opacity: 0;
+  animation-name: score;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+
+  position: absolute;
+  bottom: -300%;
+  left: -150%;
+
+  z-index: 10;
+}
+
+.circle_container:active > p {
+  opacity: 0.8;
+}
+
+.circle_container:active > p::after {
+  opacity: 0.8;
+}
+
+.circle_container:active > p::before {
+  opacity: 0.8;
+}
+
+@keyframes score {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: -10rem;
+    opacity: 0;
+  }
+}
