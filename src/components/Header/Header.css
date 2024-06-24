@@ -21,7 +21,7 @@
   font-family: monospace;
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 470px) {
   .header {
     width: 80%;
     margin: 1rem auto;

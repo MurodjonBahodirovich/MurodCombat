@@ -94,7 +94,7 @@
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 470px) {
   .circle_container {
     width: 27rem;
     height: 27rem;
