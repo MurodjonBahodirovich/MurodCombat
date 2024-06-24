@@ -7,7 +7,13 @@ import Reset from "./components/Reset/Reset";
 // const tg = window.Telegram.WebApp;
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(
+    localStorage.getItem("count")
+      ? JSON.parse(localStorage.getItem("count"))
+      : 0
+  );
+
+  count > 0 && localStorage.setItem("count", JSON.stringify(count));
 
   // useEffect(() => {
   //   tg.ready();
